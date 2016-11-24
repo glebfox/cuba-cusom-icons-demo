@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<window xmlns="http://schemas.haulmont.com/cuba/window.xsd"
+        caption="msg://caption"
+        class="com.company.demo.web.screens.Screen"
+        messagesPack="com.company.demo.web.screens">
+    <dialogMode height="600"
+                width="800"/>
+    <layout spacing="true" expand="spacer">
+        <flowBox id="box" spacing="true">
+            <button caption="Apple" icon="font-icon:APPLE"/>
+            <button caption="Plus" icon="icons/plus-btn.png"/>
+            <button caption="Headphones" icon="ico-moon-icon:HEADPHONES"/>
+            <button id="spinnerBtn" caption="Spinner"/>
+        </flowBox>
+        <label id="spacer"/>
+    </layout>
+</window>
