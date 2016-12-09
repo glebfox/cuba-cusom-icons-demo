@@ -4,7 +4,6 @@
 
 package com.company.demo.web.fonts;
 
-import com.vaadin.server.FontAwesome;
 import com.vaadin.server.FontIcon;
 import com.vaadin.server.GenericFontIcon;
 
@@ -92,7 +91,7 @@ public enum IcoMoon implements FontIcon {
 
     @Override
     public String getHtml() {
-        return GenericFontIcon.getHtml(FontAwesome.FONT_FAMILY, codepoint);
+        return GenericFontIcon.getHtml(FONT_FAMILY, codepoint);
     }
 
     @Override
