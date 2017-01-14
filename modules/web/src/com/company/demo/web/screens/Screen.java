@@ -16,19 +16,29 @@ import java.util.Map;
 public class Screen extends AbstractWindow {
 
     @Inject
-    protected FlowBoxLayout box;
+    protected FlowBoxLayout icoMoonBox;
     @Inject
     protected Button spinnerBtn;
+    @Inject
+    private FlowBoxLayout vaadinIconsBox;
+    @Inject
+    private Button walletBtn;
 
     @Override
     public void init(Map<String, Object> params) {
-        AbstractLayout layout = (AbstractLayout) WebComponentsHelper.unwrap(box);
+        initIconMoonBox();
+        initVaadinIconsBox();
+    }
+
+    private void initIconMoonBox() {
+        AbstractLayout layout = (AbstractLayout) WebComponentsHelper.unwrap(icoMoonBox);
         com.vaadin.ui.Button btn = new com.vaadin.ui.Button("Play", IcoMoon.PLAY3);
         layout.addComponent(btn);
 
-        btn = new com.vaadin.ui.Button("Search", WebComponentsHelper.getResource("theme:icons.search.png"));
-        layout.addComponent(btn);
-
         spinnerBtn.setIcon("ico-moon-icon:SPINNER6");
+    }
+
+    private void initVaadinIconsBox() {
+        walletBtn.setIcon("vaadin-icon:WALLET");
     }
 }

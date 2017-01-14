@@ -1,11 +1,6 @@
-/*
- * TODO Copyright
- */
-
 package com.company.demo.web.fonts;
 
 import com.vaadin.server.FontIcon;
-import com.vaadin.server.GenericFontIcon;
 
 /**
  * @author glebfox
@@ -91,7 +86,9 @@ public enum IcoMoon implements FontIcon {
 
     @Override
     public String getHtml() {
-        return GenericFontIcon.getHtml(FONT_FAMILY, codepoint);
+        return "<span class=\"v-icon v-icon-" + name().toLowerCase()
+                + "\" style=\"font-family: " + FONT_FAMILY + ";\">&#x"
+                + Integer.toHexString(codepoint) + ";</span>";
     }
 
     @Override

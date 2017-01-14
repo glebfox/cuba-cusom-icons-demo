@@ -6,11 +6,20 @@
     <dialogMode height="600"
                 width="800"/>
     <layout spacing="true" expand="spacer">
-        <flowBox id="box" spacing="true">
+        <label value="FontAwesome"/>
+        <flowBox id="fontAwesomeBox" spacing="true">
             <button caption="Apple" icon="font-icon:APPLE"/>
             <button caption="Plus" icon="icons/plus-btn.png"/>
+        </flowBox>
+        <label value="IcoMoon"/>
+        <flowBox id="icoMoonBox" spacing="true">
             <button caption="Headphones" icon="ico-moon-icon:HEADPHONES"/>
             <button id="spinnerBtn" caption="Spinner"/>
+        </flowBox>
+        <label value="VaadinIcons"/>
+        <flowBox id="vaadinIconsBox" spacing="true">
+            <button caption="Vaadin Logo" icon="vaadin-icon:VAADIN_H"/>
+            <button id="walletBtn" caption="Wallet"/>
         </flowBox>
         <label id="spacer"/>
     </layout>
